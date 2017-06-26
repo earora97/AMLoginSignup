@@ -1,5 +1,5 @@
 <?php
-    $con = mysqli_connect("sql12.freesqldatabase.com", "sql12182069", "LugbkDe3QP", "sql12182069");
+    $con = mysqli_connect("localhost", "id2067322_eava", "eavanshi", "id2067322_loginregister");
     
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -9,7 +9,7 @@
     mysqli_stmt_execute($statement);
     
     mysqli_stmt_store_result($statement);
-    mysqli_stmt_bind_result($statement, $userID, $name, $age, $username, $password);
+    mysqli_stmt_bind_result($statement, $userID, $name, $username , $age, $password);
     
     $response = array();
     $response["success"] = false;  
